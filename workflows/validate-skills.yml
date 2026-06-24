@@ -1,0 +1,78 @@
+name: Validate Skills
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'tools/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'skills/**'
+      - 'tools/**'
+
+jobs:
+  structure-check:
+    name: Structure Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r tools/validator/requirements.txt
+      - name: Validate changed skills
+        run: |
+          python tools/validator/validate.py --ci --changed-only
+
+  overlap-check:
+    name: Overlap Detection
+    runs-on: ubuntu-latest
+    needs: structure-check
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r tools/overlap-checker/requirements.txt
+      - name: Check overlap for changed skills
+        run: |
+          python tools/overlap-checker/check.py --ci --changed-only
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: structure-check
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run security scan
+        run: |
+          python tools/validator/validate.py --security-scan --ci
+
+  quality-score:
+    name: Quality Scoring
+    runs-on: ubuntu-latest
+    needs: [structure-check, overlap-check, security-scan]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r tools/quality-scorer/requirements.txt
+      - name: Score changed skills
+        run: |
+          python tools/quality-scorer/score.py --ci --changed-only
