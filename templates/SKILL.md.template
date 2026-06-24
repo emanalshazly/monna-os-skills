@@ -1,0 +1,72 @@
+---
+name: <skill-name>
+version: 1.0.0
+description: >
+  Use when the user [specific trigger condition].
+  [One-sentence value proposition].
+  [Optional: mention what it is NOT for].
+triggers:
+  - "trigger phrase 1"
+  - "trigger phrase 2"
+  - "trigger phrase 3"
+categories:
+  - <domain>
+  - <subdomain>
+quality_tier: draft
+compatibility:
+  kimi: unknown
+  claude: unknown
+  copilot: unknown
+  cursor: unknown
+  openclaw: unknown
+fingerprint: "<domain>-###-<hash>"
+last_tested: YYYY-MM-DD
+author: <github-username>
+license: MIT
+---
+
+# <Skill Name>
+
+## When to Use This Skill
+
+[Clear, specific trigger conditions. Be precise — vague triggers cause false activation.]
+
+## When NOT to Use This Skill
+
+[Explicitly state what this skill does NOT cover. This is critical for scope honesty.]
+
+## Core Principles
+
+[3–5 guiding principles that shape how the skill behaves. These are constraints, not instructions.]
+
+## Step-by-Step Process
+
+### Phase 1: [Phase Name]
+[Detailed steps. Each step is an actionable instruction for the agent.]
+
+### Phase 2: [Phase Name]
+[Continue...]
+
+## Anti-Patterns
+
+[Common mistakes this skill helps avoid. This section is highly valued by the community.]
+
+## Worked Examples
+
+See [examples/](examples/) for complete worked examples with inputs and outputs.
+
+## References
+
+See [references/](references/) for supporting documentation, standards mappings, and source materials.
+
+## Validation Checklist
+
+See [tests/](tests/) for the validation checklist used to certify this skill.
+
+## Compatibility Notes
+
+[Any runtime-specific quirks or requirements.]
+
+## Changelog
+
+- v1.0.0 (YYYY-MM-DD) — Initial release
