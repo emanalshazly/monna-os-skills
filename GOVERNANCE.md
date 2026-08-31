@@ -6,13 +6,13 @@
 
 ### Maintainer
 - **Current:** monna (@emanalshazly)
-- **Authority:** Final decisions on architecture, security advisories, tier promotions to CERTIFIED/UNIVERSAL
+- **Authority:** Final decisions on architecture, security advisories, and whether deterministic validation evidence is sufficient
 - **Responsibility:** Sets direction, resolves conflicts, ensures security
 
 ### Reviewer
-- **Requirements:** Contributed 3+ skills reaching REVIEWED tier; completed reviewer training
-- **Authority:** Can promote skills to REVIEWED tier; can request changes on PRs
-- **Responsibility:** Audits skills for quality, accuracy, and scope honesty
+- **Requirements:** Relevant domain expertise disclosed in the review record
+- **Authority:** Can request changes and publish a dated review receipt
+- **Responsibility:** Reviews accuracy and scope honesty without granting certification
 
 ### Contributor
 - **Requirements:** Anyone who submits a skill or tooling improvement
@@ -29,8 +29,8 @@
 | Decision Type | Process | Authority |
 |---------------|---------|-----------|
 | New skill submission | PR + validation pipeline | Automated → Reviewer → Maintainer |
-| Tier promotion to REVIEWED | Community audit + Reviewer approval | Reviewer |
-| Tier promotion to CERTIFIED | Maintainer + 2 independent Reviewers | Maintainer |
+| Evidence tier change from draft to validated | Passing deterministic CI on the exact commit | Maintainer |
+| Independent review claim | Dated public receipt with reviewer identity and scope | Reviewer |
 | Security advisory | Immediate override | Maintainer |
 | Architecture changes | RFC + 7-day comment period | Maintainer |
 | Governance changes | RFC + 14-day comment period + community vote | Maintainer |
@@ -49,7 +49,7 @@
 3. If still unresolved, Maintainer arbitrates
 
 ### Security Concerns
-- **Maintainer can override all tiers immediately** for security issues
+- **Maintainer can downgrade evidence state immediately** for security issues
 - No voting on security — safety first, discussion after
 - Security advisory issued publicly; skill deprecated if warranted
 
@@ -59,10 +59,10 @@ This project practices **scope honesty** — we acknowledge what we are and what
 
 - **We ARE** a quality-governed skill collection for underserved domains
 - **We ARE NOT** a commercial marketplace (that's [monna-skill-portfolio](https://promptbase.com/profile/monna))
-- **We ARE** cross-runtime and open-source
-- **We ARE NOT** a runtime-specific tool or MCP server replacement
-- **We ARE** community-audited
-- **We ARE NOT** a zero-gatekeeping dump
+- **We ARE** open-source
+- **We ARE NOT** cross-runtime verified without per-runtime receipts
+- **We ARE** deterministically checked for structure and overlap
+- **We ARE NOT** independently certified or community-audited by default
 
 Violations of scope honesty (e.g., trying to commercialize skills in this repo, misrepresenting quality tiers) are grounds for PR rejection or contributor suspension.
 

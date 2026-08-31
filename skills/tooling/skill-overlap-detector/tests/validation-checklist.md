@@ -13,7 +13,7 @@ This checklist is used to certify the `skill-overlap-detector` skill and can be 
 | 1 | SKILL.md exists and has valid YAML frontmatter | ☐ | |
 | 2 | `name` field matches directory name | ☐ | `skill-overlap-detector` |
 | 3 | `fingerprint` is unique and follows format `tool-XXX-XXXXXX` | ☐ | `tool-001-d7e2b4` |
-| 4 | `quality_tier` is declared and valid | ☐ | `certified` |
+| 4 | `quality_tier` is declared and valid | ☐ | `validated` |
 | 5 | `compatibility` table covers all target platforms | ☐ | 5 platforms listed |
 | 6 | `last_tested` date is present and within 90 days | ☐ | `2026-06-24` |
 | 7 | Trigger phrases section has ≥ 5 distinct triggers | ☐ | 10 triggers listed |
@@ -120,7 +120,7 @@ This checklist is used to certify the `skill-overlap-detector` skill and can be 
 
 ## Certification Notes
 
-This skill is certified because:
+This checklist can support a scoped human review because:
 1. All 60 checklist items pass
 2. The tool runs successfully on the example corpus
 3. The algorithm is fully explainable (no black-box dependencies)

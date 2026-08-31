@@ -3,7 +3,7 @@
 > **System:** A multi-agent AI platform where agents communicate via an orchestrator, access external tools via MCP (Model Context Protocol), and serve end-users through a chat interface.  
 > **Scope:** Platform architecture, agent-to-agent communication, MCP tool access, model inference, and user interaction.  
 > **Frameworks:** STRIDE, DREAD, MITRE ATT&CK  
-> **Classification:** Certified example — for skill reference and training
+> **Classification:** Worked example — not independently audited or production validated
 
 ---
 

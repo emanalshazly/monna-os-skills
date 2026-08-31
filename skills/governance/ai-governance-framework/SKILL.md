@@ -1,24 +1,23 @@
+---
+name: ai-governance-framework
+description: Design an evidence-bounded AI governance framework and implementation roadmap.
+version: 1.0.0
+quality_tier: validated
+fingerprint: gov-001-a7f3c9
+license: MIT
+---
+
 # AI Governance Framework Skill
 
-## Metadata
+> Evidence state: validated structure only. Runtime compatibility, legal compliance, and certification are not claimed.
 
-- **Name:** `ai-governance-framework`
-- **Trigger phrases:**
-  - `design AI governance framework`
-  - `NIST AI RMF implementation`
-  - `EU AI Act compliance roadmap`
-  - `ISO 42001 gap analysis`
-  - `AI risk management system`
-- **Quality tier:** `certified`
-- **Fingerprint:** `gov-001-a7f3c9`
-- **Compatibility:**
-  - `certified`: Kimi/Daimon, Claude, Copilot
-  - `validated`: Cursor, OpenClaw
-- **Last tested:** 2026-06-24
-- **Author:** monna
-- **License:** MIT
+## Trigger phrases
 
----
+- `design AI governance framework`
+- `NIST AI RMF implementation`
+- `EU AI Act compliance roadmap`
+- `ISO 42001 gap analysis`
+- `AI risk management system`
 
 ## When to Use / When NOT to Use
 

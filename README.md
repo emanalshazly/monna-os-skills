@@ -1,103 +1,46 @@
 # monna-os-skills
 
-> **The quality-governed, cross-runtime skill collection.**
-> Agent skills as first-class software assets — with evidence-based validation, community audit, and lifecycle governance.
+An open collection of five agent Skills with deterministic structure and overlap checks.
 
-[![Quality Tier](https://img.shields.io/badge/quality-certified-blue)](#quality-tiers)
+[![Validation](https://github.com/emanalshazly/monna-os-skills/actions/workflows/validate-skills.yml/badge.svg)](https://github.com/emanalshazly/monna-os-skills/actions/workflows/validate-skills.yml)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Standard](https://img.shields.io/badge/skill--spec-Anthropic%20Agent%20Skills-orange)](https://agentskills.io)
 
----
+## Evidence boundary
 
-## What This Is
+`validated` in this repository means that the committed Skill passes deterministic checks for required frontmatter, unique names and fingerprints, local links, obvious secret patterns, and the configured overlap threshold. It does **not** mean community audit, independent review, production use, cross-runtime compatibility, legal compliance, or market adoption.
 
-**monna-os-skills** is a curated, open-source collection of AI agent skills that treats skills as **auditable software assets** — not disposable prompts.
+No Skill in this repository is currently described as reviewed, certified, or universal. Runtime compatibility remains unverified until a dated execution receipt exists for that runtime.
 
-Every skill in this collection passes a rigorous validation pipeline: structure checks, overlap detection, security scanning, content review, and community audit. Skills are organized by quality tier, not by download count.
+<!-- SKILL_COUNT: 5 -->
 
-### Why This Exists
+## Current catalog
 
-The agent skill ecosystem is exploding — but **quality is cratering**. Most registries (52K+ skills on some platforms) are open dumps with zero gatekeeping. Documented malware exists. Conflicting skills bloat agent context. No one treats skills as governed, versioned, lifecycle-managed assets.
+| Domain | Skill | Evidence state |
+| --- | --- | --- |
+| Data governance | [data-quality-auditor](skills/data-governance/data-quality-auditor/SKILL.md) | validated structure only |
+| Governance | [ai-governance-framework](skills/governance/ai-governance-framework/SKILL.md) | validated structure only |
+| Multilingual | [arabic-technical-translator](skills/multilingual/arabic-technical-translator/SKILL.md) | validated structure only |
+| Security | [threat-modeling-guide](skills/security/threat-modeling-guide/SKILL.md) | validated structure only |
+| Tooling | [skill-overlap-detector](skills/tooling/skill-overlap-detector/SKILL.md) | validated structure only |
 
-**monna-os-skills** fixes that by building the infrastructure layer the ecosystem desperately needs:
-- **Evidence-gated validation** — every claim traceable, every overlap blocked
-- **Quality tiers** — Draft → Validated → Reviewed → Certified → Universal
-- **Lifecycle governance** — deprecation, migration, sunset paths
-- **Cross-runtime compatibility** — tested on Kimi/Daimon, Claude, Copilot, Cursor, OpenClaw, Gemini
+## Install
 
-## Quick Start
+Copy the selected Skill directory into the Skills location supported by your agent runtime. The repository does not claim a universal installation command because runtime conventions differ.
 
-### Install a Skill
+## Validate
 
 ```bash
-# Using Vercel skills CLI (universal)
-npx skills add emanalshazly/monna-os-skills
-
-# Using GitHub CLI (GitHub Copilot)
-gh skill add emanalshazly/monna-os-skills
-
-# Or manually copy the SKILL.md file to your agent's skills directory
+python tools/validator/validate.py --skills-dir skills --check-catalog
+python -m pip install -r tools/overlap-checker/requirements.txt
+python tools/overlap-checker/overlap_checker.py --skills-dir skills --output overlap-report.md
 ```
 
-### Browse Skills by Domain
-
-| Domain | Skills | Quality Tier |
-|--------|--------|--------------|
-| [AI Governance & Compliance](skills/governance/) | 3 | 🏆 Certified |
-| [Security & Risk Assessment](skills/security/) | 2 | 🔍 Reviewed |
-| [Data Governance](skills/data-governance/) | 1 | ✅ Validated |
-| [Infrastructure & DePIN](skills/infrastructure/) | 1 | 🏗️ Draft |
-| [Multilingual & Cross-Cultural](skills/multilingual/) | 1 | ✅ Validated |
-| [Open-Source Tooling](skills/tooling/) | 2 | 🏆 Certified |
-
-## Quality Tiers
-
-| Tier | Badge | What It Means |
-|------|-------|---------------|
-| 🏗️ Draft | `draft` | Submitted, under review. Not yet validated. |
-| ✅ Validated | `validated` | Passes automated structure, overlap, and security checks. |
-| 🔍 Reviewed | `reviewed` | Community audit completed. No structural or security issues. |
-| 🏆 Certified | `certified` | Multiple independent audits. Real-world usage confirmed. |
-| 🌐 Universal | `universal` | Certified AND tested on 5+ runtimes. |
-
-## Skill Format
-
-All skills follow the [Anthropic Agent Skills spec](https://agentskills.io) with MONNA extensions for quality governance:
-
-```yaml
----
-name: example-skill
-version: 1.0.0
-description: "Use when..."
-categories: [governance, compliance]
-quality_tier: certified
-compatibility:
-  kimi: certified
-  claude: certified
-  copilot: validated
-fingerprint: "gov-001-a7f3c9"
-last_tested: 2026-06-24
----
-```
-
-See [Skill Authoring Guide](docs/skill-authoring-guide.md) for full details.
+The first command is dependency-free. The overlap check uses scikit-learn and exits with code `2` when the configured collision threshold is exceeded.
 
 ## Contributing
 
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) and [Governance Model](GOVERNANCE.md) before submitting.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), [GOVERNANCE.md](GOVERNANCE.md), and the [Skill authoring guide](docs/skill-authoring-guide.md). New submissions start as `draft`; they can be marked `validated` only after the repository checks pass.
 
-**Key rule:** All skills must be **distinct from the commercial monna-skill-portfolio** (sold on PromptBase/Gumroad). This repo is permanently free and open-source.
+## Security and license
 
-## Security
-
-Found a security issue in a skill? See our [Security Policy](SECURITY.md). We take security seriously — skills execute with agent privileges, so we audit them like code.
-
-## License
-
-[MIT](LICENSE) — permanently free, no attribution required for usage.
-
-## Maintainer
-
-Built and maintained by **monna** ([@emanalshazly](https://github.com/emanalshazly)) — prompt engineer, AI governance practitioner, and open-source contributor.
-
-> "Power without governance is chaos. Let's build the governance layer together."
+Report security issues through [SECURITY.md](SECURITY.md). Repository materials are licensed under [MIT](LICENSE).

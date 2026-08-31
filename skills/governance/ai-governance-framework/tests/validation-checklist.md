@@ -2,7 +2,7 @@
 
 ## Skill: `ai-governance-framework`
 ## Fingerprint: `gov-001-a7f3c9`
-## Quality Tier: `certified`
+## Evidence Tier: `validated` structure only
 ## Last Tested: 2026-06-24
 
 This checklist is used by reviewers to verify that the skill works correctly across all major sections. Each item must be marked **PASS** or **FAIL** with reviewer initials and date.
@@ -15,7 +15,7 @@ This checklist is used by reviewers to verify that the skill works correctly acr
 |---|-----------|----------|--------|----------|------|
 | 1.1 | Skill name is correct | `ai-governance-framework` | ☐ PASS / ☐ FAIL | | |
 | 1.2 | Fingerprint is present and matches | `gov-001-a7f3c9` | ☐ PASS / ☐ FAIL | | |
-| 1.3 | Quality tier is declared | `certified` | ☐ PASS / ☐ FAIL | | |
+| 1.3 | Quality tier is declared | `validated` | ☐ PASS / ☐ FAIL | | |
 | 1.4 | Compatibility matrix is complete | All runtimes listed with correct tiers | ☐ PASS / ☐ FAIL | | |
 | 1.5 | Trigger phrases are precise and specific | No generic phrases; all 5 triggers present | ☐ PASS / ☐ FAIL | | |
 | 1.6 | License is declared | MIT | ☐ PASS / ☐ FAIL | | |
