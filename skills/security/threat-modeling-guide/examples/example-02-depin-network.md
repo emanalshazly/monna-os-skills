@@ -3,7 +3,7 @@
 > **System:** A decentralized physical infrastructure network (DePIN) node that provides wireless coverage (e.g., a Helium-like network) and earns token rewards based on validated coverage proofs.  
 > **Scope:** Node hardware, firmware, network communication, consensus participation, token economics, and oracle dependencies.  
 > **Frameworks:** STRIDE, DREAD, MITRE ATT&CK (with DePIN custom extensions)  
-> **Classification:** Certified example — for skill reference and training
+> **Classification:** Worked example — not independently audited or production validated
 
 ---
 

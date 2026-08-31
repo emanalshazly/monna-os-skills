@@ -1,13 +1,13 @@
 # Skill Overlap Detector
 
-A Python CLI tool for detecting semantic duplication within agent skill collections.
+A Python CLI tool for detecting weighted lexical overlap within agent skill collections.
 
 Part of the [MONNA Open-Source Skill Collection](https://github.com/emanalshazly/monna-os-skills).
 
 ## What It Does
 
 This tool analyzes all `SKILL.md` files in a collection and computes:
-- **Content overlap** via TF-IDF + cosine similarity (semantic comparison)
+- **Content overlap** via TF-IDF + cosine similarity (lexical signal, not semantic equivalence)
 - **Trigger-phrase collision** via Jaccard similarity (activation overlap)
 - **Fingerprint generation** for change detection and rotation tracking
 
@@ -61,7 +61,7 @@ The tool returns exit code `2` if overlap is detected, making it suitable for CI
 | Trigger overlap | 0.40 | Warning — review trigger distinctiveness |
 | Medium overlap | 0.45 | Watchlist — monitor for drift |
 
-Calibrated on the MONNA commercial skill portfolio (50+ skills). See `skills/tooling/skill-overlap-detector/references/threshold-rationale.md` for the full derivation.
+These thresholds are repository defaults, not independently calibrated performance guarantees. Inspect borderline pairs and record any threshold change with its fixture evidence.
 
 ## CI Integration
 

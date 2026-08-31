@@ -163,7 +163,7 @@ For each item, mark one of:
 | At least 50 of 61 items must be PASS | 50/61 | | ☐ MET ☐ NOT MET |
 | No critical item (marked with *) may be FAIL | 0 critical FAILs | | ☐ MET ☐ NOT MET |
 
-**Overall Result:** ☐ **CERTIFIED** — Audit meets all quality standards  
+**Overall Result:** ☐ **REVIEWED** — Checklist completed; this is not certification evidence
 ☐ **CONDITIONAL** — Minor gaps; address PARTIAL items within 14 days  
 ☐ **REJECTED** — Significant gaps; remediate FAIL items and re-submit
 

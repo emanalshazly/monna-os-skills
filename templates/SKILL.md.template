@@ -1,27 +1,9 @@
 ---
 name: <skill-name>
 version: 1.0.0
-description: >
-  Use when the user [specific trigger condition].
-  [One-sentence value proposition].
-  [Optional: mention what it is NOT for].
-triggers:
-  - "trigger phrase 1"
-  - "trigger phrase 2"
-  - "trigger phrase 3"
-categories:
-  - <domain>
-  - <subdomain>
+description: Use when the user needs a specific bounded outcome from this Skill.
 quality_tier: draft
-compatibility:
-  kimi: unknown
-  claude: unknown
-  copilot: unknown
-  cursor: unknown
-  openclaw: unknown
 fingerprint: "<domain>-###-<hash>"
-last_tested: YYYY-MM-DD
-author: <github-username>
 license: MIT
 ---
 

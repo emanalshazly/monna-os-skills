@@ -3,7 +3,7 @@
 Skill Overlap Detector
 ======================
 
-A CLI tool for detecting semantic duplication within skill collections.
+A CLI tool for detecting weighted lexical overlap within skill collections.
 Uses TF-IDF + cosine similarity for content overlap, and Jaccard similarity
 for trigger-phrase collision detection.
 

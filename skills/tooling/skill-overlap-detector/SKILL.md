@@ -1,17 +1,10 @@
 ---
 name: skill-overlap-detector
+description: Detect semantic and trigger overlap across a collection of agent Skills.
 version: 1.0.0
 fingerprint: tool-001-d7e2b4
-quality_tier: certified
-author: monna
+quality_tier: validated
 license: MIT
-last_tested: 2026-06-24
-compatibility:
-  Kimi/Daimon: certified
-  Claude: certified
-  Copilot: certified
-  Cursor: validated
-  OpenClaw: validated
 ---
 
 # Skill Overlap Detector
@@ -269,11 +262,11 @@ See [`tests/validation-checklist.md`](tests/validation-checklist.md) for the val
 | Field | Value |
 |-------|-------|
 | **Skill ID** | `tool-001-d7e2b4` |
-| **Quality Tier** | `certified` |
+| **Quality Tier** | `validated` structure only |
 | **Author** | `monna` |
 | **License** | `MIT` |
 | **Last Tested** | `2026-06-24` |
-| **Compatibility** | Kimi/Daimon: certified, Claude: certified, Copilot: certified, Cursor: validated, OpenClaw: validated |
+| **Compatibility** | Unverified; no runtime receipts are committed |
 
 ---
 

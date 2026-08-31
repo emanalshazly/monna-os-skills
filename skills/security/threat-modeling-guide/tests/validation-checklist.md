@@ -141,9 +141,9 @@
 
 ## Validation Result
 
-**Overall Result:** ☐ **CERTIFIED** / ☐ **REQUIRES REVISION** / ☐ **REJECTED**
+**Overall Result:** ☐ **VALIDATED** / ☐ **REQUIRES REVISION** / ☐ **REJECTED**
 
-**Certification Criteria:**
+**Validation Criteria:**
 - All checks in "Document Completeness" and "Anti-Patterns and Boundaries" must pass.
 - At least 90% of checks in each remaining category must pass.
 - Total passing checks must be at least 48 out of 55.
@@ -156,4 +156,4 @@
 
 ---
 
-> **Usage:** This checklist is intended for peer reviewers and auditors. A threat model that passes this checklist is considered "certified" under the `threat-modeling-guide` skill standards. A model that fails should be revised and re-submitted for validation.
+> **Usage:** This checklist is an internal deterministic review aid. A passing result does not confer professional certification, independent audit, or production security evidence.

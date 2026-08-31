@@ -72,26 +72,20 @@ PR Submitted
 [CI: security scan] → FAIL → Security review required
     ↓ PASS
 → Quality Tier: VALIDATED (automated)
-    ↓
-[Community audit] → FAIL → Request changes
-    ↓ PASS
-→ Quality Tier: REVIEWED
-    ↓
-[Maintainer review] → FAIL → Request changes
-    ↓ PASS
-→ Quality Tier: CERTIFIED (or stays at REVIEWED)
 ```
+
+`VALIDATED` is the highest repository tier. Human reviews may be attached as scoped receipts, but they do not create a certification tier.
 
 ## Becoming a Reviewer
 
-After contributing 3+ skills that reach REVIEWED tier, you can apply to become a Reviewer:
+After contributing 3+ validated Skills, you can apply to become a Reviewer:
 
 1. Complete the [Reviewer Training](docs/reviewer-training.md) (read the guide, complete the quiz)
 2. Submit a reviewer application issue
 3. Maintainer approval
 
 Reviewers can:
-- Promote skills to REVIEWED tier
+- Publish scoped review receipts
 - Request changes on PRs
 - Participate in governance discussions
 

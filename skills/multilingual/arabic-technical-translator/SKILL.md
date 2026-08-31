@@ -1,4 +1,13 @@
-# SKILL.md — Arabic Technical Translator
+---
+name: arabic-technical-translator
+description: Translate technical content between Arabic and English with explicit terminology and register decisions.
+version: 1.0.0
+quality_tier: validated
+fingerprint: multi-001-e8f3c5
+license: MIT
+---
+
+# Arabic Technical Translator
 
 ## Skill: `arabic-technical-translator`
 
@@ -9,10 +18,9 @@
 ### Identity & Purpose
 
 **SkillBuilder:** SkillBuilder_Multilingual
-**Quality Tier:** `certified`
+**Evidence Tier:** `validated` structure only
 **Fingerprint:** `multi-001-e8f3c5`
-**Compatibility:** Kimi/Daimon: certified | Claude: certified | Copilot: certified | Cursor: validated | OpenClaw: validated
-**Last Tested:** 2026-06-24
+**Compatibility:** Unverified; no runtime receipts are committed.
 **Author:** monna
 **License:** MIT
 
@@ -223,11 +231,11 @@
 |-----------|-------|
 | `skill_name` | `arabic-technical-translator` |
 | `fingerprint` | `multi-001-e8f3c5` |
-| `quality_tier` | `certified` |
+| `quality_tier` | `validated` structure only |
 | `author` | `monna` |
 | `license` | `MIT` |
 | `last_tested` | `2026-06-24` |
-| `compatibility` | Kimi/Daimon: certified; Claude: certified; Copilot: certified; Cursor: validated; OpenClaw: validated |
+| `compatibility` | Unverified; no runtime receipts are committed |
 | `domain` | multilingual, technical translation, MENA tech, Arabic-English, code-switching |
 | `requires_human_review` | Yes — technical accuracy review and cultural validation are mandatory |
 | `language` | Arabic (Egyptian colloquial, MSA), English |

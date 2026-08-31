@@ -1,24 +1,17 @@
 ---
 name: threat-modeling-guide
-quality_tier: certified
+description: Build an evidence-bounded threat model for AI agent systems using STRIDE and DREAD.
+quality_tier: validated
 fingerprint: sec-001-d2e4a7
-compatibility:
-  kimi: certified
-  claude: certified
-  copilot: certified
-  cursor: certified
-  openclaw: validated
-author: Monna
 version: 1.0.0
-last_tested: 2026-06-24
 license: MIT
 ---
 
 # Threat Modeling Guide for AI Agent Systems
 
-> A certified-level skill for building comprehensive threat models for AI agent systems, multi-agent platforms, and DePIN infrastructure using STRIDE + DREAD + MITRE ATT&CK frameworks.
+> A structured Skill for building threat models for AI agent systems, multi-agent platforms, and DePIN infrastructure using STRIDE + DREAD + MITRE ATT&CK frameworks.
 > 
-> **Quality Tier:** Certified — includes complete examples, references, and 55-item validation checklist.
+> **Evidence Tier:** Validated structure only — examples and a review checklist are present; runtime compatibility is unverified.
 > **Fingerprint:** sec-001-d2e4a7
 > **Confidence Level:** High — evidence-based, traceable to DFD elements.
 
@@ -267,7 +260,7 @@ Use the `tests/validation-checklist.md` to validate the threat model before fina
 
 ---
 
-> **Quality Note:** This skill is certified under the MONNA quality framework. It has been tested with the validation checklist, includes two complete worked examples with specific technical details, and references three authoritative security frameworks (STRIDE, DREAD, MITRE ATT&CK). Every threat is traceable to a DFD element. Every mitigation is specific and verifiable. This is not a theoretical framework — it is a practical, executable threat modeling process for AI systems.
+> **Quality Note:** This Skill includes two worked examples and references STRIDE, DREAD, and MITRE ATT&CK. The repository validator checks structure and links only; it does not establish runtime effectiveness or independent certification.
 > 
 > **Last Tested:** 2026-06-24
 > **Next Review:** 2026-09-24

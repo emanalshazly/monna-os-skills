@@ -1,18 +1,15 @@
-# Skill: Data Quality Auditor
-
+---
+name: data-quality-auditor
+description: Audit data quality dimensions and produce an evidence-bounded remediation plan.
+version: 1.0.0
+quality_tier: validated
+fingerprint: data-001-b4e8d2
+license: MIT
 ---
 
-**Name:** `data-quality-auditor`
-**Domain:** Data Governance
-**Quality Tier:** `certified`
-**Fingerprint:** `data-001-b4e8d2`
-**Compatibility:** Kimi/Daimon: certified, Claude: certified, Copilot: certified, Cursor: validated, OpenClaw: validated
-**Last Tested:** 2026-06-24
-**Author:** monna
-**License:** MIT
-**Home:** `skills/data-governance/data-quality-auditor/`
+# Data Quality Auditor
 
----
+> Evidence state: validated structure only. Runtime compatibility and professional certification are not claimed.
 
 ## Trigger Phrases
 
@@ -269,7 +266,7 @@ The audit process follows five phases. Each phase produces a concrete artifact t
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0.0 | 2026-06-24 | Initial certified release |
+| 1.0.0 | 2026-06-24 | Initial public version; evidence tier corrected to validated structure only |
 
 ---
 
