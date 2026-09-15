@@ -43,14 +43,14 @@ skills/<domain>/<skill-name>/
 ### 3. Validate Locally
 
 ```bash
-# Install validation tools
-pip install -r tools/validator/requirements.txt
+# Install overlap-check dependencies (structure validation is dependency-free)
+python -m pip install -r tools/overlap-checker/requirements.txt
 
 # Run structure check
-python tools/validator/validate.py skills/<domain>/<skill-name>/
+python tools/validator/validate.py --skills-dir skills --check-catalog
 
 # Run overlap check
-python tools/overlap-checker/check.py skills/<domain>/<skill-name>/SKILL.md
+python tools/overlap-checker/overlap_checker.py --skills-dir skills --output overlap-report.md
 ```
 
 ### 4. Submit a Pull Request
