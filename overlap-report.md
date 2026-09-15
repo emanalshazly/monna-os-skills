@@ -1,7 +1,7 @@
 ================================================================================
 SKILL OVERLAP DETECTION REPORT
-Generated: 2026-08-31T06:21:37.167056
-Corpus: 5 skills
+Generated: 2026-09-15T20:16:35.035346
+Corpus: 7 skills
 Threshold: 0.60 (content), 0.40 (triggers)
 ================================================================================
 
@@ -19,10 +19,12 @@ Threshold: 0.60 (content), 0.40 (triggers)
 
 --- PASS (No Overlap) ---
 
-skill-overlap-detector ✓
-threat-modeling-guide ✓
-arabic-technical-translator ✓
-ai-governance-framework ✓
 data-quality-auditor ✓
+ai-governance-framework ✓
+audit-finding-closure-reviewer ✓
+arabic-release-change-reviewer ✓
+arabic-technical-translator ✓
+threat-modeling-guide ✓
+skill-overlap-detector ✓
 
-(5/5 skills have no overlap or warning)
+(7/7 skills have no overlap or warning)
